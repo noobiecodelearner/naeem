@@ -2884,7 +2884,7 @@ img.u-pull-left {
     z-index          : 100;
     display          : flex;
     height           : var(--header-height);
-    background-color : var(--color-body);
+    background-color : white;
     width            : 100%;
     transition       : height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     position         : absolute;
