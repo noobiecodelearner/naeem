@@ -25,8 +25,8 @@
      */
     --color-1-lighter              : hsla(0, 65%, 60%, 1);
     --color-1-light                : hsla(0, 65%, 50%, 1);
-    --color-1-dark                 : rgb(180, 0, 0);
-    --color-1-darker               : rgb(123, 3, 3);
+    --color-1-dark                 : rgb(186, 152, 0);
+    --color-1-darker               : rgb(186, 152, 0);
 
     --color-2-lighter              : hsla(336, 13%, 36%, 1);
     --color-2-light                : hsla(336, 13%, 26%, 1);
@@ -3302,7 +3302,7 @@ img.u-pull-left {
     content          : "";
     width            : 1px;
     height           : calc(100% - var(--timeline-top-adjust));
-    background-color : var(--color-border);
+    background-color : var(--color-white);
     position         : absolute;
     top              : var(--timeline-top-adjust);
     left             : calc(var(--timeline-vertical-border-pos) + var(--gutter));
@@ -3320,7 +3320,7 @@ img.u-pull-left {
     display          : block;
     height           : 1px;
     width            : 3.2rem;
-    background-color : var(--color-border);
+    background-color : var(--color-white);
     position         : absolute;
     top              : 50%;
     left             : calc(var(--timeline-vertical-border-pos) + 1px);
@@ -3349,7 +3349,7 @@ img.u-pull-left {
     display          : block;
     height           : 4.4rem;
     width            : 3px;
-    background-color : var(--color-text-dark);
+    background-color : var(--color-white);
     position         : absolute;
     top              : 0;
     left             : calc(var(--timeline-vertical-border-pos) - 1px);
