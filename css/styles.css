@@ -1,78 +1,4 @@
-/* =================================================================== 
- * Augustine Main Stylesheet
- * Template Ver. 1.0.0
- * 03-16-2022
- * ------------------------------------------------------------------
- *
- * TOC:
- * # SETTINGS
- *      ## fonts
- *      ## colors
- *      ## spacing and typescale
- *      ## grid variables
- * # NORMALIZE
- * # BASE SETUP
- * # GRID 
- *      ## large screen devices 
- *      ## medium screen devices 
- *      ## tablet devices 
- *      ## mobile devices 
- *      ## small screen devices 
- *      ## additional column stackpoints 
- * # UTILITY CLASSES
- * # TYPOGRAPHY 
- *      ## base type styles
- *      ## additional typography & helper classes
- *      ## lists
- *      ## spacing
- * # PRELOADER
- * # FORM
- *      ## style placeholder text
- *      ## change autocomplete styles in Chrome
- * # BUTTONS
- * # TABLE
- * # COMPONENTS
- *      ## pagination
- *      ## alert box 
- *      ## skillbars 
- *      ## stats tabs
- * # PROJECT-WIDE SHARED STYLES
- *      ## theme-specific typography classes
- *      ## media classes
- *      ## swiper overrides
- * # PAGE WRAP
- * # SITE HEADER
- *      ## branding
- *      ## main navigation
- *      ## header social
- *      ## mobile menu toggle
- * # INTRO
- *      ## intro text
- *      ## intro bg
- * # ABOUT
- *      ## about timelines
- *      ## about skills
- *      ## about clients
- * # WORKS
- *      ## portfolio list
- *      ## testimonial slider
- * # FOOTER
- *      ## copyright
- *      ## go top
- *
- *
- * ------------------------------------------------------------------ */
 
-
-/* ===================================================================
- * # SETTINGS
- *
- *
- * ------------------------------------------------------------------- */
-
-/* ------------------------------------------------------------------- 
- * ## fonts 
- * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Figtree:wght@300;400;500;600;700&display=swap");
 
 :root {
@@ -99,8 +25,8 @@
      */
     --color-1-lighter              : hsla(0, 65%, 60%, 1);
     --color-1-light                : hsla(0, 65%, 50%, 1);
-    --color-1-dark                 : hsla(0, 65%, 35%, 1);
-    --color-1-darker               : hsla(0, 65%, 20%, 1);
+    --color-1-dark                 : rgb(180, 0, 0);
+    --color-1-darker               : rgb(123, 3, 3);
 
     --color-2-lighter              : hsla(336, 13%, 36%, 1);
     --color-2-light                : hsla(336, 13%, 26%, 1);
@@ -149,10 +75,10 @@
 
     /* text
      */
-    --color-text                   : var(--color-gray-17);
-    --color-text-dark              : var(--color-gray-19);
-    --color-text-light             : var(--color-gray-12);
-    --color-placeholder            : var(--color-gray-12);
+    --color-text                   : var(--color-white);
+    --color-text-dark              : var(--color-black);
+    --color-text-light             : var(--color-white);
+    --color-placeholder            : var(--color-white);
 
     /* buttons
      */
@@ -177,7 +103,7 @@
 
     /* others
      */
-    --color-body                   : #D3A121;
+    --color-body                   : #000000;
     --color-border                 : rgba(0, 0, 0, .08);
     --border-radius                : 3px;
 }
@@ -1338,7 +1264,7 @@ h6,
 .h6 {
     font-family            : var(--font-2);
     font-weight            : 400;
-    color                  : var(--color-text-dark);
+    color                  : var(--color-text-light);
     font-variant-ligatures : common-ligatures;
     text-rendering         : optimizeLegibility;
 }
@@ -1349,7 +1275,7 @@ h1,
     margin-bottom : var(--vspace-0_75);
 }
 
-h2,
+h2, 
 .h2,
 h3,
 .h3,
@@ -1744,7 +1670,7 @@ ul.disc li::before {
     width          : 8px;
     height         : 8px;
     border-radius  : 50%;
-    background     : var(--color-1-dark);
+    background     : var(--color-1-light);
     position       : absolute;
     left           : -.9em;
     top            : 11px;
@@ -2734,11 +2660,23 @@ td:last-child {
     margin-top        : 0;
 }
 
+.text-huge-title-1 {
+    --text-huge       : 6.4rem;
+    --text-multiplier : 1;
+    font-family       : var(--font-2);
+    font-weight       : 400;
+    font-size         : calc(var(--text-huge) * var(--text-multiplier));
+    line-height       : 1.0638;
+    letter-spacing    : -0.02em;
+    color             : var(--color-text-light);
+    margin-top        : 0;
+}
+
 .text-subtitle {
     font-family    : var(--font-1);
     font-size      : var(--text-size);
     font-weight    : 500;
-    color          : var(--color-text-dark);
+    color          : var(--color-text-light);
     text-transform : uppercase;
     letter-spacing : .2em;
     margin-top     : 0;
@@ -3449,8 +3387,9 @@ img.u-pull-left {
 .s-about__skills {
     padding-top : var(--vspace-0_625);
     padding-bottom: 0;
-    margin-bottom : 0; /* Add this */
+    margin-bottom : 0;
 }
+
 
 .s-about__skills .text-subtitle::after {
     display : none;
@@ -3459,7 +3398,7 @@ img.u-pull-left {
 .s-about__skills .skill-bars {
     --bar-padding : var(--timeline-left-padding);
     margin-top    : var(--vspace-1_5);
-    margin-bottom : 0; /* Add this */
+    margin-bottom : 0;
     display       : flex;
     flex-flow     : row wrap;
 }
@@ -3472,6 +3411,7 @@ img.u-pull-left {
 
 .s-about__skills .skill-bars li::before {
     left : .4rem;
+    color: white; /* ADD THIS */
 }
 
 .s-about__skills .skill-bars li:nth-child(2n+1) {
@@ -3495,47 +3435,16 @@ img.u-pull-left {
     font-size      : calc(var(--text-size) * 1.1053);
     text-transform : none;
     letter-spacing : 0;
+    color: white;
 }
 
-/* --------------------------------------------------------------------
- * ## about clients
- * -------------------------------------------------------------------- */
-.s-about__clients {
-    padding-top : var(--vspace-0_5);
-    overflow    : hidden;
+/* ADD THESE NEW RULES */
+.s-about__skills .skill-bars li .progress {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.s-about__clients .clients-list {
-    list-style  : none;
-    display     : flex;
-    flex-flow   : row wrap;
-    margin-left : 0;
-}
-
-.s-about__clients .clients-list a {
-    color : var(--color-text-dark);
-}
-
-.s-about__clients .clients-list a:focus,
-.s-about__clients .clients-list a:hover {
-    color : var(--color-1);
-}
-
-.s-about__clients .clients-list li {
-    display      : inline-block;
-    padding-left : 0;
-    position     : relative;
-}
-
-.s-about__clients .clients-list li:not(:last-child)::after {
-    content     : "/";
-    font-family : var(--font-1);
-    font-weight : 300;
-    font-size   : .48em;
-    color       : var(--color-1-light);
-    margin      : 0 .2em 0 .3em;
-    position    : relative;
-    bottom      : .05em;
+.s-about__skills .skill-bars li .progress::before {
+    background-color: white;
 }
 
 /* ------------------------------------------------------------------- 
@@ -3646,10 +3555,38 @@ img.u-pull-left {
     padding-bottom   : calc(0.5 * var(--space));
     background-color : white;
 }
+.s-works .text-huge-title {
+    margin-bottom: var(--vspace-0_125); /* or adjust to your preference */
+}
 
 /* ------------------------------------------------------------------- 
  * ## portfolio list
  * ------------------------------------------------------------------- */
+/* Make paper title black */
+.s-works .folio-list {
+    margin-top: var(--vspace-1); /* or var(--vspace-0_5) for a tiny bit of space */
+}
+.folio-item__title {
+    color: var(--color-black);
+}
+
+/* Make author names black */
+.paper-authors {
+    color: var(--color-black);
+}
+
+.paper-authors .authors {
+    color: var(--color-black);
+}
+
+/* Make conference/venue name black */
+.paper-venue {
+    color: var(--color-black);
+}
+
+.paper-venue .venue {
+    color: var(--color-black);
+}
 .folio-list {
     margin-top    : var(--vspace-2_5);
     margin-bottom : var(--vspace-2);
@@ -3741,7 +3678,7 @@ img.u-pull-left {
     font-size     : var(--text-sm);
     line-height   : 1.5;
     margin-bottom : 0.2rem;
-    color         : var(--color-gray-8);
+    color         : var(--color-black);
 }
 
 .folio-item__meta .project-link {
@@ -3771,119 +3708,6 @@ img.u-pull-left {
     transform  : scale(1);
 }
 
-/* ------------------------------------------------------------------- 
- * ## testimonial slider
- * ------------------------------------------------------------------- */
-.testimonials {
-    margin-top : var(--vspace-4_5);
-}
-
-.testimonial-slider {
-    padding-right  : var(--vspace-4);
-    padding-left   : var(--vspace-4);
-    padding-bottom : var(--vspace-1_5);
-}
-
-.testimonial-slider__slide {
-    background-color : white;
-    text-align       : center;
-    width            : 100%;
-    position         : relative;
-}
-
-.testimonial-slider__slide p {
-    font-size   : var(--text-xl);
-    line-height : 1.6244;
-}
-
-.testimonial-slider__author {
-    display       : inline-block;
-    text-align    : left;
-    min-height    : var(--vspace-2);
-    margin-top    : var(--vspace-0_75);
-    margin-bottom : var(--vspace-0_625);
-    padding-left  : calc(2.25 * var(--space));
-    position      : relative;
-}
-
-.testimonial-slider__avatar {
-    width         : var(--vspace-1_75);
-    height        : var(--vspace-1_75);
-    border-radius : 100%;
-    outline       : none;
-    position      : absolute;
-    top           : 0;
-    left          : 0;
-}
-
-.testimonial-slider__cite {
-    display : block;
-}
-
-.testimonial-slider__cite strong,
-.testimonial-slider__cite span {
-    font-style : normal;
-    transition : all 0.3s ease-in-out;
-}
-
-.testimonial-slider__cite strong {
-    font-family : var(--font-2);
-    font-size   : calc(var(--text-size) * 1.1053);
-    font-weight : 400;
-    line-height : var(--vspace-1);
-    color       : var(--color-text-dark);
-}
-
-.testimonial-slider__cite span {
-    display     : block;
-    font-size   : var(--text-sm);
-    font-weight : 400;
-    line-height : var(--vspace-0_5);
-    color       : var(--color-gray-8);
-}
-
-.testimonial-slider__next,
-.testimonial-slider__prev {
-    z-index          : 10000;
-    display          : flex;
-    justify-content  : center;
-    align-items      : center;
-    border-radius    : 50%;
-    background-color : var(--color-gray-2);
-    height           : var(--vspace-1_75);
-    width            : var(--vspace-1_75);
-    cursor           : pointer;
-    transform        : translateY(-50%);
-    position         : absolute;
-    top              : calc(50% - var(--vspace-1_5));
-}
-
-.testimonial-slider__next svg,
-.testimonial-slider__prev svg {
-    height : var(--vspace-0_75);
-    width  : var(--vspace-0_75);
-}
-
-.testimonial-slider__next svg path,
-.testimonial-slider__prev svg path {
-    fill : var(--color-text-dark);
-}
-
-.testimonial-slider__next {
-    right : 0;
-}
-
-.testimonial-slider__prev {
-    left : 0;
-}
-
-.swiper-button-disabled {
-    cursor : default;
-}
-
-.swiper-button-disabled svg path {
-    fill : var(--color-gray-8);
-}
 
 /* ------------------------------------------------------------------- 
  * responsive:
@@ -3994,6 +3818,12 @@ img.u-pull-left {
  *
  *
  * ------------------------------------------------------------------- */
+.s-footer__contact-header .text-huge-title-1 {
+    margin-bottom: 0;
+}
+.s-footer__contact-content{
+    margin-top: 0;
+}
 .s-footer {
     padding-top    : calc(2 * var(--space));
     padding-bottom : var(--vspace-2_5);
