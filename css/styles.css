@@ -3345,15 +3345,15 @@ img.u-pull-left {
     --timeline-vertical-border-pos : 8px;
 
     padding-top                    : var(--vspace-5);
-    padding-bottom                 : var(--vspace-3);
+    padding-bottom                 : 0;
 }
 
 .s-about__block {
-    margin-bottom : var(--vspace-2);
+    margin-bottom : var(--vspace-2_5);
 }
 
 .s-about__timeline {
-    padding-top : var(--vspace-1_5);
+    padding-top : var(--vspace-0_625);
 }
 
 .s-about__timeline-section {
@@ -3447,7 +3447,9 @@ img.u-pull-left {
  * ## about skills
  * -------------------------------------------------------------------- */
 .s-about__skills {
-    padding-top : var(--vspace-3);
+    padding-top : var(--vspace-0_625);
+    padding-bottom: 0;
+    margin-bottom : 0; /* Add this */
 }
 
 .s-about__skills .text-subtitle::after {
@@ -3456,7 +3458,8 @@ img.u-pull-left {
 
 .s-about__skills .skill-bars {
     --bar-padding : var(--timeline-left-padding);
-    margin-top    : var(--vspace-2_5);
+    margin-top    : var(--vspace-1_5);
+    margin-bottom : 0; /* Add this */
     display       : flex;
     flex-flow     : row wrap;
 }
@@ -3639,8 +3642,8 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-works {
-    padding-top      : calc(6 * var(--space));
-    padding-bottom   : calc(5.5 * var(--space));
+    padding-top      : calc(3 * var(--space));
+    padding-bottom   : calc(0.5 * var(--space));
     background-color : white;
 }
 
@@ -3992,7 +3995,7 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-footer {
-    padding-top    : calc(6 * var(--space));
+    padding-top    : calc(2 * var(--space));
     padding-bottom : var(--vspace-2_5);
     font-weight    : 300;
     position       : relative;
